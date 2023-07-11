@@ -1,9 +1,9 @@
-"use client"
+'use client';
 
 import { useStorModal } from '@/hooks/use-store-modal';
 import { useEffect } from 'react';
 
-export default function Home() {
+export default function SetupPage() {
   const { isOpen, onOpen } = useStorModal();
 
   useEffect(() => {
@@ -12,5 +12,5 @@ export default function Home() {
     }
   }, [isOpen, onOpen]);
 
-  return <main className='p-4'>Root page</main>;
+  return null;
 }
