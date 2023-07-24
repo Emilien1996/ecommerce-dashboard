@@ -9,12 +9,19 @@ interface IMainNavProps extends React.HtmlHTMLAttributes<HTMLElement> {}
 const MainNav: React.FC<IMainNavProps> = ({ className, ...props }) => {
   const pathname = usePathname();
   const params = useParams();
-
+  const checkActiveRoute = (route: string) => {
+    return pathname === `/${params.storeId}${route}`;
+  };
   const routes = [
+    {
+      href: `/${params.storeId}/`,
+      label: 'Overview',
+      active: checkActiveRoute(''),
+    },
     {
       href: `/${params.storeId}/settings`,
       label: 'Settings',
-      active: pathname === `/${params.storeId}/settings`,
+      active: checkActiveRoute('/settings'),
     },
   ];
   return (
