@@ -19,6 +19,11 @@ const MainNav: React.FC<IMainNavProps> = ({ className, ...props }) => {
       active: checkActiveRoute(''),
     },
     {
+      href: `/${params.storeId}/bilboards`,
+      label: 'Bilboards',
+      active: checkActiveRoute(''),
+    },
+    {
       href: `/${params.storeId}/settings`,
       label: 'Settings',
       active: checkActiveRoute('/settings'),

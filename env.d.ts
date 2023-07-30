@@ -7,6 +7,7 @@ declare global {
       CLERK_SECRET_KEY: string;
       ENV: 'test' | 'dev' | 'prod';
       DATABASE_URL : string
+      NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME : string 
     }
   }
 }
