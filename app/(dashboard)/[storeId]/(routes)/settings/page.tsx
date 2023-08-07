@@ -1,4 +1,5 @@
 import SettingsForm from '@/components/settings-form';
+import prismadb from '@/lib/prismadb';
 import { auth } from '@clerk/nextjs';
 import { redirect } from 'next/navigation';
 
@@ -14,7 +15,7 @@ const SettingsPage: React.FC<SettingsPageProps> = async ({ params }) => {
     return null;
   }
  
-  const store = await prisma?.store.findFirst({
+  const store = await prismadb?.store.findFirst({
     where: {
       id: params.storeId,
       userId,
