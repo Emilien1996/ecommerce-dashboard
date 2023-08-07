@@ -80,7 +80,7 @@ const BilboardForm: React.FC<IBillboardFormProps> = ({ initialData }) => {
     try {
       setLoading(true);
       await axios.delete(
-        `/api/${params.storeId}/bilboards/${params.bilboardId}`
+        `/api/${params.storeId}/bilboards`
       );
       router.refresh();
       router.push('/');
